@@ -1,0 +1,274 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 15px;
+    background-color: #FFFFF0;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #264653;
+    box-sizing: border-box;
+}
+
+header {
+    position: sticky;
+}
+
+h1 {
+    font-family: Optima, sans-serif;
+    font-size: 52px;
+    margin: 50px auto;
+    border: 2px solid rgba(231, 111, 81);
+    padding: 20px;
+    box-shadow: 4px 4px 10px rgba(42, 157, 143, 0.7);
+    display: block;
+}
+
+
+nav {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    justify-content: right;
+}
+
+div, .portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; 
+}
+
+div h2 {
+    font-family: Optima, sans-serif;
+    margin: 20px 0; 
+    justify-content: right; 
+}
+
+div p {
+    font-style: italic; 
+    margin: 0; 
+    justify-content: left; 
+}
+
+div img, .portfolio-grid img {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: 100%;
+    height: auto;
+    margin: 10px;
+    border: 2px solid #264653;
+    border-radius: 8px;
+    opacity: 0; 
+    transform: translateY(30px); 
+    transition: transform 0.3s ease, opacity 1s ease; 
+    animation: fadeInUp 1s forwards; 
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+div img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+div img:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+div img:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+div img:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+div img:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+div img:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+div img:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+div img:nth-child(8) {
+    animation-delay: 0.7s;
+}
+
+div img:nth-child(9) {
+    animation-delay: 0.8s;
+}
+
+div img:nth-child(10) {
+    animation-delay: 0.9s;
+}
+
+div img:nth-child(11) {
+    animation-delay: 1s;
+}
+
+div img:nth-child(12) {
+    animation-delay: 1.1s;
+}
+
+div img:nth-child(13) {
+    animation-delay: 1.2s;
+}
+
+div img:nth-child(14) {
+    animation-delay: 1.3s;
+}
+
+div img:nth-child(15) {
+    animation-delay: 1.4s;
+}
+
+div img:nth-child(16) {
+    animation-delay: 1.5s;
+}
+
+div img:nth-child(17) {
+    animation-delay: 1.6s;
+}
+
+div img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    div img {
+        width: 33.33%;
+        margin: 10px 0;
+    }
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #264653;
+}
+
+nav a:hover {
+    color: #E76F51;
+}
+
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 100; 
+    font-size: 16px; 
+    border: none; 
+    outline: none; 
+    background-color: #E76F51; 
+    color: white; 
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 4px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+}
+
+#myBtn:hover {
+    background-color: #D6453D; 
+}
+footer {
+    text-align: left;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+nav {
+   
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu > li > a {
+    text-decoration: none;
+    color: #264653;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.menu > li > a:hover {
+    background-color: #E76F51;
+}
+
+
+.dropdown .submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none; 
+    background-color:#264653;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.dropdown .submenu li {
+    width: 150px;
+}
+
+.dropdown .submenu a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 15px;
+    display: block;
+}
+
+.dropdown .submenu a:hover {
+    background-color: #E76F51;
+}
+
+
+.dropdown:hover .submenu {
+    display: block;
+}
